@@ -53,7 +53,7 @@ const GeneratePassword = () => {
                   <Flex gap={"20px"} flexWrap={"wrap"}>
                     <NumberInput
                       width={"80px"}
-                      min={0}
+                      min={1}
                       max={50}
                       onChange={(event) => handlelengthchange(event, "number")}                
                       value={passwordlength}
