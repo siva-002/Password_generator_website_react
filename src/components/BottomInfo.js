@@ -3,24 +3,29 @@ import React from "react";
 
 const BottomInfo = () => {
   return (
-    <Flex
-      paddingTop={"80px"}
-      justifyContent={"space-between"}
-      flexWrap={"wrap"}
-    >
-      <Box w={{ base: "100%", md: "50%" }} order={{ base: "2", md: "1" }}>
+    <Flex paddingTop={"80px"} justifyContent={"center"} flexWrap={"wrap"}>
+      <Box
+        w={{ base: "100%", md: "50%", "2xl": "35%" }}
+        // minH={{base:"450px"}}
+        order={{ base: "2", md: "1" }}
+        margin={"0"}
+        padding={"0"}
+      >
         <Image src="images/account_create.svg" />
       </Box>
-      <Box
+      <Flex
         w={{ base: "100%", md: "40%" }}
-        marginTop={"60px"}
+        // marginTop={"60px"}
         order={{ base: "1", md: "2" }}
+        direction={"column"}
+        justifyContent={{ base: "center" }}
       >
         <Text
           fontWeight={"800"}
           textTransform={"uppercase"}
           color={"red"}
           m="1"
+          // fontSize={{ base: "1rem", "2xl": "2rem" }}
         >
           More than a password generator
         </Text>
@@ -31,7 +36,7 @@ const BottomInfo = () => {
         >
           Your passwords, from any device
         </Heading>
-        <Box p="2" lineHeight={"30px"}>
+        <Box p="2" >
           With{" "}
           <Text
             textDecoration={"underline"}
@@ -58,7 +63,7 @@ const BottomInfo = () => {
         <Button colorScheme="pink" h={"50px"} w={"200px"} m="2">
           Try Personal Free
         </Button>
-      </Box>
+      </Flex>
     </Flex>
   );
 };

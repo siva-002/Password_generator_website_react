@@ -1,25 +1,26 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useRef, useState } from "react";
 
 const DataContext = createContext({});
 
 export const DataProvider = ({ children }) => {
   const [generatedPassword, setgeneratedPassword] = useState("");
-  const [passwordlength, setpasswordlength] = useState(1);
+  const [passwordlength, setpasswordlength] = useState(12);
   const [selectedRadio, setselectedRadio] = useState({ say: true });
   const [selectedCheckbox, setselectedCheckbox] = useState({
     upper: true,
-    lower: false,
-    number: false,
-    symbol: false,
+    lower: true,
+    number: true,
+    symbol: true,
   });
   const [CheckboxReadonly, setcheckboxReadonly] = useState({});
   const [modalOpen, setmodalOpen] = useState(false);
   const [copyMessage, setCopyMessage] = useState("");
 
+ 
+
   //handling input and slider changes
-  const handlelengthchange = (e) => {
-    setpasswordlength(e);
-    // setgeneratedPassword(e);
+  const handlelengthchange = (value,tag) => {
+    setpasswordlength(value);
   };
 
   //handling checkbox and radio button changes

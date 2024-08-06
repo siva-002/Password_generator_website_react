@@ -1,0 +1,8 @@
+width for section
+
+input focus set  
+
+
+while load input length 12
+
+

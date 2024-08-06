@@ -20,11 +20,10 @@ function App() {
       <Showpassword />
       <GeneratePassword />
       <Flex justifyContent={"center"} marginBottom={"50px"}>
-        <Button colorScheme="pink" onClick={handleCopy}>
+        <Button colorScheme="red" onClick={handleCopy} height={"50px"}>
           Copy Password
         </Button>
       </Flex>
-
       <Container maxW={"100%"} margin={"0"} background={"#fff"}>
         <BottomInfo />
         <BottomCompanyInfo />

@@ -4,10 +4,12 @@ import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 const BottomCompanyInfo = () => {
   return (
     <Flex
-      paddingTop={"80px"}
-      justifyContent={"space-between"}
+      // paddingTop={"80px"}
+      justifyContent={"center"}
+      alignItems={"center"}
       flexWrap={"wrap"}
       marginBottom={"50px"}
+      gap={"40px"}
     >
       <Box w={{ base: "100%", md: "40%" }} marginTop={"60px"}>
         <Text

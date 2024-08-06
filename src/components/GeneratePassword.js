@@ -22,6 +22,7 @@ import {
   SliderThumb,
   Divider,
   Tooltip,
+  Input
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
 import { tooltipstyle } from "../Style";
@@ -52,9 +53,9 @@ const GeneratePassword = () => {
                   <Flex gap={"20px"} flexWrap={"wrap"}>
                     <NumberInput
                       width={"80px"}
-                      onChange={handlelengthchange}
                       min={0}
                       max={50}
+                      onChange={(event) => handlelengthchange(event, "number")}                
                       value={passwordlength}
                     >
                       <NumberInputField height={"50px"} />
@@ -68,12 +69,13 @@ const GeneratePassword = () => {
                     <Slider
                       aria-label="slider-ex-2"
                       colorScheme="red"
+                      focusThumbOnChange={false}
                       defaultValue={passwordlength}
                       value={passwordlength}
                       min={0}
                       max={50}
                       width={"200px"}
-                      onChange={handlelengthchange}
+                      onChange={(event) => handlelengthchange(event, "slider")}
                     >
                       <SliderTrack boxSize={3} borderRadius={"30px"}>
                         <SliderFilledTrack />
@@ -83,7 +85,7 @@ const GeneratePassword = () => {
                   </Flex>
                 </Box>
                 {/* Radio button components  */}
-                <RadioGroup defaultValue="say">
+                <RadioGroup defaultValue="all">
                   <Stack spacing={5}>
                     <Flex gap={"8px"}>
                       <Radio

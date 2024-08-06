@@ -13,8 +13,8 @@ import React from "react";
 
 const TopInfo = () => {
   return (
-    <Container maxW={"95%"}>
-      <Card background={"#D0DEED"}>
+    <Container maxW={{base:"95%",xl:"max-content"}}>
+      <Card background={"#D0DEED"} >
         <CardBody margin={"0"} padding={"0"}>
           <Flex direction={{ base: "column", md: "row" }}>
             <Box
@@ -47,9 +47,9 @@ const TopInfo = () => {
                 </Button>
               </Flex>
             </Box>
-            <Box marginTop={"50px"}>
+            <Flex justifyContent={"flex-end"} alignItems={"flex-end"}>
               <Image src="images/video_top.svg" />
-            </Box>
+            </Flex>
           </Flex>
         </CardBody>
       </Card>
