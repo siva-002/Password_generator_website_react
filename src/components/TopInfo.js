@@ -3,7 +3,6 @@ import {
   Card,
   CardBody,
   Flex,
-  Box,
   Heading,
   Text,
   Image,
@@ -13,13 +12,20 @@ import React from "react";
 
 const TopInfo = () => {
   return (
-    <Container maxW={{base:"95%",xl:"max-content"}}>
-      <Card background={"#D0DEED"} >
+    <Container maxW={{ base: "95%", xl: "max-content" }} marginTop={"100px"}>
+      <Card background={"#D0DEED"}>
         <CardBody margin={"0"} padding={"0"}>
-          <Flex direction={{ base: "column", md: "row" }}>
-            <Box
+          <Flex
+            direction={{ base: "column", md: "row" }}
+            minH={{ base: "400px" }}
+            // justifyContent={"center"}
+            alignItems={""}
+          >
+            <Flex
               w={{ base: "80%", md: "60%" }}
               m={{ base: "20px", md: "50px" }}
+              direction={"column"}
+              justifyContent={"center"}
             >
               <Heading fontWeight={"500"} margin={"10px 0"}>
                 Need a unique, secure password?
@@ -34,7 +40,7 @@ const TopInfo = () => {
                   color={"white"}
                   height={"50px"}
                   w={{ base: "100%", xl: "30%" }}
-                  _hover={{background:"rgba(0,0,0,0.7)"}}
+                  _hover={{ background: "rgba(0,0,0,0.7)" }}
                 >
                   Try Business Free
                 </Button>
@@ -46,8 +52,8 @@ const TopInfo = () => {
                   Try Personal Free
                 </Button>
               </Flex>
-            </Box>
-            <Flex justifyContent={"flex-end"} alignItems={"flex-end"}>
+            </Flex>
+            <Flex justifyContent={""} alignItems={"flex-end"}>
               <Image src="images/video_top.svg" />
             </Flex>
           </Flex>

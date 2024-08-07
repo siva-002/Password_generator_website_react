@@ -11,7 +11,7 @@ const BottomCompanyInfo = () => {
       marginBottom={"50px"}
       gap={"40px"}
     >
-      <Box w={{ base: "100%", md: "40%" }} marginTop={"60px"}>
+      <Box w={{ base: "100%", md: "40%" }} >
         <Text
           fontWeight={"800"}
           textTransform={"uppercase"}
@@ -36,6 +36,7 @@ const BottomCompanyInfo = () => {
             display={"inline"}
             fontWeight={"800"}
           >
+            {" "}
             Business
           </Text>{" "}
           and{" "}

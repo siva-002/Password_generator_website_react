@@ -10,12 +10,14 @@ import BottomSecutity from "./components/BottomSecutity";
 import BottomRecognition from "./components/BottomRecognition";
 import BottomReview from "./components/BottomReview";
 import BottomPractice from "./components/BottomPractice";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const { handleCopy } = useContext(DataContext);
 
   return (
-    <div className="App" style={{ margin: "50px 0" }}>
+    <div className="App" style={{ margin: "0" }}>
+      <Navbar/>
       <TopInfo />
       <Showpassword />
       <GeneratePassword />

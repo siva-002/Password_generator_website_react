@@ -26,7 +26,21 @@ const inputstyle={
   width:"80%",
   fontWeight:"500"
 }
+const menubuttonstyle={
+  fontWeight:"600"
+}
+const menuitemstyle={
+  background:"none",
+  fontWeight:"600",
+  marginTop:"10px"
+}
+const menuitemhover={
+  color:"red"
+}
+const menuitemtitle={
+  color:"grey",
+  margin:"0 0 0 10px",
+  fontSize:"12px"
+}
 
-
-
-export { tooltipstyle, copystyle, inputstyle };
+export { tooltipstyle, copystyle, inputstyle,menubuttonstyle,menuitemstyle,menuitemhover,menuitemtitle };

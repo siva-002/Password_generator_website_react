@@ -19,6 +19,7 @@ const BottomInfo = () => {
         order={{ base: "1", md: "2" }}
         direction={"column"}
         justifyContent={{ base: "center" }}
+        marginTop={"-40px"}
       >
         <Text
           fontWeight={"800"}
@@ -36,7 +37,7 @@ const BottomInfo = () => {
         >
           Your passwords, from any device
         </Heading>
-        <Box p="2" >
+        <Box p="2">
           With{" "}
           <Text
             textDecoration={"underline"}
